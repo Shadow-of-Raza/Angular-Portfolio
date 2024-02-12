@@ -1,0 +1,365 @@
+/* about box Styling */
+
+.title{
+    height: 100px;
+    width: 300px;
+    display:  flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+.title h1{
+    color: #d6d6d6;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', sans-serif;
+    position: relative;
+    padding-bottom: 15px;
+}
+.title h1::before{
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 4px;
+    background: #9b6f09;
+    border-radius: 5px;
+    transform: scaleX(1);
+    left: 0;
+    bottom: 0;
+
+}
+/* outer-box  Styling */
+
+.outer-box{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Box 1 Styling */
+
+
+.box1{
+    width: 100%;
+    height: auto;
+}
+
+.box1 p{
+    font-family: 'Trebuchet MS', sans-serif;
+    text-align: justify;
+    font-size: 13px;
+    color: #B0B0B0;
+}
+.box1 span{
+    font-size: 23px;
+    color: #d6d6d6 ;
+}
+
+/* Heading Styling */
+.heading{
+  width: 100%;
+  display:  flex;
+  justify-content: left;
+  align-items: center;
+
+}
+
+.heading h1{
+    color: #B0B0B0;
+    font-size: 28px;
+    font-family: 'Trebuchet MS', sans-serif;
+    position: relative;
+    padding-bottom: 6px;
+
+   
+}
+
+.heading h1::before{
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 3px;
+  background: #B0B0B0;
+  border-radius: 5px;
+  transform: scaleX(1);
+  left: 0;
+  bottom: 0;
+}
+
+/* Box 2 Styling */
+
+.cards {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+    gap: 15px;
+    max-width: 1200px;
+  }
+  
+  .column {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  
+  }
+  
+.cards .card {
+    color: white;
+    transition: 500ms;
+    border-left: 1px solid #303030;
+    border-top: 1px solid 	#303030;
+    border-radius: 10px;
+    background-color: #222222;
+  }
+
+
+  .doing {
+    border: 1px solid #9b6f09;
+  }
+
+  .what-i-am-doing{
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .doing-icon{
+    margin-left: 1.5rem;
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #1d1d1d, #222222);
+    box-shadow:  5px 5px 10px #191919,-5px -5px 10px #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -15px;
+  }
+  .doing-icon i{
+    font-size: 25px;
+    color: #9b6f09;
+    
+  }
+  .doing-content{
+
+    width: 75%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 1rem;
+  }
+  .doing-heading{
+    height: 15%;
+    margin-top: 1rem;
+    color: #9b6f09;
+    font-family: 'Trebuchet MS', sans-serif;
+  }
+  .doing-heading h2{
+    font-size: 20px;
+
+  }
+  .doing-paragraph{
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #808080;
+    font-size: 13px;
+
+  }
+  
+  .cards .card:hover {
+    transform: scale(1, 1);
+  }
+  
+  .cards:hover .card:not(:hover) {
+    filter: blur(5px);
+    transform: scale(1, 1);
+  }
+  
+  /* Box 3 Styling */
+
+  
+  .scrolling-wrapper{
+    overflow-x: auto;
+    width: auto;
+    padding-bottom: 30px; 
+    padding-top: 25px;
+    gap: 150px;
+  }
+  
+  .card-block{
+    width: 360px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+    transition: all 0.2s;
+    border: 1px solid #9b6f09;
+    border-left: 1px solid #303030;
+    border-top: 1px solid   #303030;
+
+    border-radius: 10px;
+    background-color: #222222;
+    
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 20px 50px hsla(240%, 43%, 40%, 0.35);
+    transition: all 0.2s ease-in-out !important;
+    
+  }
+  
+  
+  .scrolling-wrapper::-webkit-scrollbar {
+    height: 8px;
+    
+  }
+  
+  .scrolling-wrapper::-webkit-scrollbar-thumb,
+  .scrolling-wrapper::-webkit-scrollbar-track {
+    border-radius: 90px;
+  }
+  
+  .scrolling-wrapper::-webkit-scrollbar-thumb {
+    background: #9b6f09;
+  }
+  
+  .scrolling-wrapper::-webkit-scrollbar-track {
+    background: #101010;
+  }
+  
+  
+  .card-body{
+    position: relative;
+    top: -45px;
+    display: flex;
+    justify-content: left;
+    margin-left: 20px;
+    margin-top: 5px;
+
+  }
+
+ 
+
+
+  .icon{
+    height: 60px;
+    width: 60px;
+    border-radius: 15px;
+    background: #282828;
+    border: 1px solid #303030;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+.icon i{
+    font-size: 25px;
+    color: #9b6f09;
+}
+
+
+.card-body-content{
+    height: 100px;
+    width: 100%;
+    position: relative;
+    top: -55px;
+    padding: 0px 20px;
+
+}
+
+.card-body-content1, .card-body-content2{
+  font-family: 'Trebuchet MS', sans-serif;
+}
+
+.card-body-content1 h2{
+  color: #9b6f09;
+  display: flex;
+  justify-content:  center;
+  position: relative;
+  top: -25px;
+  height: 35%;
+  font-size: 20px;
+  margin-bottom: 1rem;
+}
+
+.card-body-content1 .end-content {
+  display: flex;
+  justify-content:  flex-end;
+}
+
+.card-body-content2{
+  color: #808080;
+  font-size: 13px;
+  text-align: left;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: -35px;
+}
+
+
+/* For Mobile S (320px) */
+@media (max-width: 320px) {
+  .cards .card{
+    height: 180px;
+  }
+
+  .scrolling-wrapper{
+    gap: 325px;
+
+  }
+}
+
+/* For Mobile M (375px) */
+@media (min-width: 321px) and (max-width: 375px) {
+  .cards .card{
+    height: 150px;
+  }
+  .scrolling-wrapper{
+    gap: 315px;
+
+  }
+}
+
+/* For Mobile L (425px) */
+@media (min-width: 376px) and (max-width: 425px) {
+  .scrolling-wrapper{
+    gap: 300px;
+
+  }
+}
+
+/* For Tablet Portrait (600px) */
+@media (min-width: 426px) and (max-width: 600px) {
+  .cards .card{
+    height: 170px;
+  }
+  .scrolling-wrapper{
+    gap: 285px;
+
+  }
+}
+
+/* For Tablet Landscape (768px) */
+@media (min-width: 601px) and (max-width: 768px) {
+  .scrolling-wrapper{
+    gap: 250px;
+
+  }
+}
+
+/* For Larger Screens */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .scrolling-wrapper{
+    gap: 220px;
+
+  }
+}

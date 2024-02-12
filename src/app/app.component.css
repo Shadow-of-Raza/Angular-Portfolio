@@ -1,0 +1,509 @@
+.body {
+    height: auto;
+    width: auto;
+    background-color: #101010;
+}
+
+.box {
+    height: auto;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.box-1 {
+    width: 24%;
+}
+
+.box-2 {
+    width: 74%;
+   
+}
+
+.box-3 {
+    min-height: 10vh;
+    width: 98%;
+    margin-top: 2%;
+    display: flex;
+}
+
+
+.box-1, .box-2, .box-3 {
+    background-color: #202020;
+    border-radius: 15px;
+    /* Glassmorphism card effect */
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(32, 32, 32, 0.96);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+}
+
+/* Box 1 Styling */
+
+.box-1-content{
+    display: flex;
+    justify-content: center;
+}
+
+.image-frame {
+    background-color: #303030;
+    border-radius: 25%;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-frame img{
+    height: 80%;
+    width: 80%;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(0);
+    transition: scale 750ms ease-out,
+    filter 250ms ease-in-out;
+}
+.image-frame img:hover{
+    transition: all 1s ease-in-out;
+    border-radius: 25%;
+    scale: 1.05;
+    filter: grayscale(1);
+}
+
+.name-contant{
+    display: flex;
+    justify-content: center;
+}
+.name{
+    color: white;
+    font-size: 20px;
+    font-family: Georgia, serif;
+    border-radius: 5px;
+    width: 250px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.title-contant{
+    display: flex;
+    justify-content: center;
+}
+.title{
+    
+    color: #A9A9A9;
+    font-size: 10px;
+    border-radius: 5px;
+    width: 140px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #303030;
+    
+}
+
+hr{
+    color: aliceblue;
+}
+
+#contact{
+    display: grid;
+    gap: 20px;
+}
+.contact-box{
+    display: flex;
+    gap: 15px;
+}
+.icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+    background: linear-gradient(145deg, #1d1d1d, #222222);
+    box-shadow:  5px 5px 10px #191919,-5px -5px 10px #272727;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.icon i{
+    font-size: 25px;
+    color: #9b6f09;
+    
+}
+
+.contact-info{
+    height: 50px;
+    width: 170px;
+    padding: 5px;
+    color: #B0B0B0;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+.contact-info span{
+    font-size: 11px;
+    color: #808080;
+}
+.social{
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px; 
+}
+.social i{
+    font-size: larger;
+    color: #9b6f09;
+}
+
+/* Box 2 Styling */
+
+
+.nav-box{
+    width: min(65%, 950px);
+    height: 60px;
+    background-color: #282828	;
+    float: inline-end;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+    border-left: 1px solid rgba(255, 255, 255, 0.125);
+
+    border-radius: 0px 12px;
+}
+
+.link-list{
+    display: flex;
+    list-style: none;
+    gap: 1.8rem;
+    padding-top: 15px ;
+}
+.nav-link{
+    color: #B0B0B0;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 4px;
+    font-family: 'Trebuchet MS', sans-serif;
+
+}
+.nav-link::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #B0B0B0;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all 0.6s ease;
+    bottom: 0;
+    left: 0;
+}
+
+.nav-link:hover::before{
+    transform: scaleX(1);
+    
+}
+
+.nav-link.active{
+    color: #9b6f09;
+}
+
+
+/* Toggle Button Styles */
+
+
+.nav-toggle {
+    display: none;
+}
+
+.nav-toggle-label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width:100%;
+    height: 40px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+
+    z-index: 9999;
+}
+.nav-toggle-label .logo{
+  
+    padding-left: 2%;
+}
+.nav-toggle-label .icon {
+    border: 1px solid #B0B0B0;
+
+    display: flex;
+    width: 30px;
+    height: 4px;
+    background-color: #B0B0B0;
+    border-radius: 4px;
+    position: relative;
+    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.nav-toggle:checked + .nav-toggle-label .icon {
+    background-color: transparent;
+}
+
+.nav-toggle:checked + .nav-toggle-label .icon::before {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.nav-toggle:checked + .nav-toggle-label .icon::after {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.nav-toggle:checked + .nav-toggle-label .icon::before,
+.nav-toggle:checked + .nav-toggle-label .icon::after {
+    background-color: #B0B0B0;
+}
+
+.nav-toggle-label .icon::before,
+.nav-toggle-label .icon::after {
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: #B0B0B0;
+    border-radius: 4px;
+    transition: transform 0.5s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.nav-toggle-label .icon::before {
+    top: -10px;
+}
+
+.nav-toggle-label .icon::after {
+    bottom: -10px;
+}
+
+/* Box-3 Styles */
+
+
+.box-3 p{
+    color: #808080;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 12px;
+}
+.copyright{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.developer{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.developer span{
+    color: #B0B0B0;
+    
+}
+
+
+
+/* Add media queries for responsiveness */
+
+ 
+
+ 
+
+@media only screen and (min-width: 768px) {
+    .nav-toggle-label {
+        display: none;
+    }
+
+    
+    
+}
+
+@media only screen and (max-width: 767px) {
+    
+    .nav-logo{
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .nav-logo h1{
+        color: #B0B0B0;
+        font-family: 'Trebuchet MS', sans-serif;
+    }
+    .nav-box nav{
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: auto;
+        background-color: #282828	;
+        border-radius: 0px 0px 12px 12px;
+        padding-top: 10px;
+        z-index: 9999;
+    }
+    
+    
+      
+    .nav-box nav.active {
+        display: block;
+    }
+
+    .link-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+
+}
+
+
+/* For small devices like mobile phones */
+@media only screen and (min-width: 319px) and (max-width: 424px) {
+    .box {
+        flex-direction: column-reverse;
+        gap: 20px 0px;
+
+    }
+
+    .box-1, .box-2 {
+        width: 100%;
+        height: auto;
+    }
+
+    .box-3 {
+        flex-direction: column-reverse;
+        gap: 10px 0px;
+
+    }
+    .copyright, .developer {
+        width: 100%; 
+        justify-content: center;
+        align-items: center;
+    }
+    .nav-box {
+        width: 100%;
+        border-radius:12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+    }
+
+    .link-list {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+    .nav-link {
+        padding: 8px 0;
+    }
+}
+
+/*  For medium devices like tablets in portrait mode */
+@media only screen and (min-width: 425px)  and (max-width: 767px) {
+    .box {
+        flex-direction: column-reverse;
+        gap: 20px 0px;
+
+    }
+
+    .box-1, .box-2 {
+        width: 100%;
+    }
+    .box-3 {
+        flex-direction: column-reverse;
+        gap: 10px 0px;
+
+    }
+    .copyright, .developer {
+        width: 100%; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav-box {
+        justify-content: center;
+        width: 100%;
+        border-radius:12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+    }
+
+    .link-list {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+
+   
+}
+
+/* For medium devices like tablets in landscape mode */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    .box {
+        flex-direction: column-reverse;
+       
+        gap: 20px 0px;
+    }
+
+    .box-1 {
+        width: 100%;
+    }
+
+    .box-2 {
+        width: 100%;
+    }
+    .box-3{
+        width: 100%;
+    }
+
+    .nav-box {
+        justify-content: center;
+        width: 100%;
+        border-radius: 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.125);
+    }
+
+    .link-list {
+        justify-content: center;
+        gap: 1.8rem;
+    }
+
+    .nav-link {
+        padding: 4px;
+    }
+}
+
+/* For large devices like desktops and laptops */
+@media only screen and (min-width: 1025px) {
+    .box {
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    .box-1 {
+        width: 24%;
+    }
+
+    .box-2 {
+        width: 74%;
+    }
+
+    .box-3{
+        width: 100%;
+    }
+    .nav-box {
+        width: 48%;
+    }
+}
