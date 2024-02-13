@@ -1,10 +1,9 @@
-<div class="container-fluid pt-4 pb-3 body">
+<div class="container-fluid py-4 body">
   <div class="container box ">
       
-      <div class="box-1  ">
-          
+      <div class="box-1  pt-5">
               <div class="box-1-content">
-                  <div class=" image-frame mt-5">
+                  <div class=" image-frame ">
                       <img  src="../../../assets/anshu-profile.png" alt="anshu-profile" >
                   </div>
                   <hr>               
@@ -26,7 +25,7 @@
               
               <div class="contact-box">
                   <div class="icon">
-                      <i class="fa-solid fa-envelope"></i>
+                      <i class="fa-solid fa-envelope" id="abc"></i>
                   </div>
                   <div class="contact-info">                        
                           <p> <span>Email</span><br>
@@ -35,8 +34,8 @@
                   </div>  
               </div>
               <div class="contact-box">
-                  <div class="icon">
-                      <i class="fa-solid fa-phone"></i>
+                  <div class="icon" >
+                      <i class="fa-solid fa-phone" id="abc"></i>
                   </div>
                   <div class="contact-info">                        
                           <p> <span>Phone</span><br>
@@ -45,8 +44,8 @@
                   </div>  
               </div>
               <div class="contact-box">
-                  <div class="icon">
-                      <i class="fas fa-birthday-cake"></i>
+                  <div class="icon" >
+                      <i class="fas fa-birthday-cake" id="abc"></i>
                   </div>
                   <div class="contact-info">                        
                           <p> <span>Birthday</span><br>
@@ -55,8 +54,8 @@
                   </div>  
               </div>
               <div class="contact-box">
-                  <div class="icon">
-                      <i class="fa-solid fa-location-dot"></i>
+                  <div class="icon" >
+                      <i class="fa-solid fa-location-dot" id="abc"></i>
                   </div>
                   <div class="contact-info">                        
                           <p> <span>Location</span><br>
@@ -66,30 +65,30 @@
               </div>
               
           </div>
-          <div class="social">
+          <div class="social" >
               <div class="social-icon"> 
                   <a href="https://www.linkedin.com/in/mohd-ansar-bux/" target="_blank">
-                      <i class="fa-brands fa-linkedin"></i> 
+                      <i class="fa-brands fa-linkedin" id="abc"></i> 
                   </a>
               </div>
               <div class="social-icon"> 
                   <a href="https://github.com/Shadow-of-Raza" target="_blank">
-                      <i class="fa-brands fa-github"></i> 
+                      <i class="fa-brands fa-github" id="abc"></i> 
                   </a>
               </div>
               <div class="social-icon"> 
                   <a href="https://www.instagram.com/shadow.of.raza/" target="_blank">
-                      <i class="fa-brands fa-instagram"></i> 
+                      <i class="fa-brands fa-instagram" id="abc"></i> 
                   </a>
               </div>
               <div class="social-icon"> 
                   <a href="https://www.facebook.com/shadowansar/" target="_blank">
-                      <i class="fa-brands fa-facebook"></i> 
+                      <i class="fa-brands fa-facebook" id="abc"></i> 
                   </a>
               </div>
               <div class="social-icon"> 
                   <a href="https://twitter.com/BuxAnsar" target="_blank">
-                      <i class="fa-brands fa-twitter"></i> 
+                      <i class="fa-brands fa-twitter" id="abc"></i> 
                   </a>
               </div>
           </div>
@@ -124,6 +123,54 @@
                   </nav>
               
           </div>
+          <div class="plus">
+
+            <div class="wrapper">
+                <input type="checkbox" id="toogle" class="hidden-trigger">
+                <label for="toogle" class="circle">
+              <svg class="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" xml:space="preserve" version="1.1" viewBox="0 0 48 48">
+                  <image width="48" height="48" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAQAAAD9CzEMAAAAbElEQVR4Ae3XwQnFQAiE4eVVsGAP1mkPFjwvQvYSWCQYCYGZv4Dv5MGB5ghcIiDQI+kCftCzNsAR8y5gYu2rwCBAgMBTgEC3rek2yQEtAZoDjso8AyaKexmIDJUZD40AAQIE0gwx449GgMC9/t0b7GTsa7J+AAAAAElFTkSuQmCC"></image>
+                </svg>
+                </label>
+                
+                <div class="subs">
+                  <button class="sub-circle" (click)="changeColor('#FF3333', 'rgba(255, 51, 51, 0.2)', 'rgba(255, 51, 51, 0.4)', 'rgba(255, 51, 51, 0.6)', 'rgba(255, 51, 51, 0.8)', 'rgba(255, 51, 51, 1)') ">
+                    <input value="1" name="sub-circle" type="radio" id="sub1" class="hidden-sub-trigger">
+                    <label for="sub1"></label>
+                  </button>
+                  <button class="sub-circle" (click)="changeColor('#FF0066', 'rgba(51, 0, 20, 0.2)', 'rgba(102, 0, 41, 0.4)', 'rgba(153, 0, 61, 0.6)', 'rgba(255, 51, 51, 0.8)', 'rgba(204, 0, 82, 1)')">
+                    <input value="1" name="sub-circle" type="radio" id="sub2" class="hidden-sub-trigger">
+                    <label for="sub2"></label>
+                  </button>
+                  <button class="sub-circle" (click)="changeColor('#FF00BF', 'rgba(51, 0, 38, 0.2)', 'rgba(102, 0, 77, 0.4)', 'rgba(153, 0, 115, 0.6)', 'rgba(204, 0, 153, 0.8)', 'rgba(255, 0, 191, 1)')">
+                    <input value="1" name="sub-circle" type="radio" id="sub3" class="hidden-sub-trigger">
+                    <label for="sub3"></label>
+                  </button>
+                  <button class="sub-circle" (click)="changeColor('#0066FF', 'rgba(0, 20, 51, 0.2)', 'rgba(0, 41, 102, 0.4)', 'rgba(0, 61, 153, 0.6)', 'rgba(0, 82, 204, 0.8)', 'rgba(0, 102, 255, 1)')">
+                    <input value="1" name="sub-circle" type="radio" id="sub4" class="hidden-sub-trigger">
+                    <label for="sub4"></label>
+                  </button>
+                  <button class="sub-circle" (click)="changeColor('#33FF33', 'rgba(51, 255, 51, 0.2)', 'rgba(51, 255, 51, 0.4)', 'rgba(51, 255, 51, 0.6)', 'rgba(51, 255, 51, 0.8)', 'rgba(51, 255, 51, 1)')">
+                    <input value="1" name="sub-circle" type="radio" id="sub5" class="hidden-sub-trigger">
+                    <label for="sub5"></label>
+                  </button>
+                  <button class="sub-circle" (click)="changeColor('#FFCC33', 'rgba(255, 204, 51, 0.2)', 'rgba(255, 204, 51, 0.4)', 'rgba(255, 204, 51, 0.6)', 'rgba(255, 204, 51, 0.8)', 'rgba(255, 204, 51, 1)')">
+                    <input value="1" name="sub-circle" type="radio" id="sub6" class="hidden-sub-trigger">
+                    <label for="sub6"></label>
+                  </button>
+                  <button class="sub-circle" (click)="changeColor('#FFFF00', 'rgba(51, 51, 0, 0.2)', 'rgba(102, 102, 0, 0.4)', 'rgba(153, 153, 0, 0.6)', 'rgba(204, 204, 0, 0.8)', 'rgba(255, 255, 0, 1)')" >
+                    <input value="1" name="sub-circle" type="radio" id="sub7" class="hidden-sub-trigger">
+                    <label for="sub7"></label>
+                  </button>
+                  <button class="sub-circle" (click)="changeColor('#00FFFF', 'rgba(0, 51, 51, 0.2)', 'rgba(0, 102, 102, 0.4)', 'rgba(0, 153, 153, 0.6)', 'rgba(0, 204, 204, 0.8)', 'rgba(0, 255, 255, 1)')">
+                    <input value="1" name="sub-circle" type="radio" id="sub8" class="hidden-sub-trigger">
+                    <label for="sub8"></label>
+                  </button>
+                 </div>
+              </div>
+
+          </div>
+          
           <div class="component">
               <router-outlet></router-outlet>
           </div>     

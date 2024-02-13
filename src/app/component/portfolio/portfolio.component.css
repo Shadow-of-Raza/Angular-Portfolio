@@ -6,19 +6,19 @@
     align-items: center;
 }
 
-.title h1{
+.title .head{
     color: #d6d6d6;
     font-size: 40px;
     font-family: 'Trebuchet MS', sans-serif;
     position: relative;
     padding-bottom: 15px;
 }
-h1::before{
+.head::before{
     content: "";
     position: absolute;
     width: 75%;
     height: 4px;
-    background: #9b6f09;
+    background: var(--title-before-color, #9b6f09);
     border-radius: 5px;
     transform: scaleX(1);
     left: 0;
@@ -26,36 +26,6 @@ h1::before{
 
 }
 
-/* Heading Styling */
-.heading{
-    width: 100%;
-    display:  flex;
-    justify-content: left;
-    align-items: center;
-  
-  }
-  
-  .heading h1{
-      color: #B0B0B0;
-      font-size: 28px;
-      font-family: 'Trebuchet MS', sans-serif;
-      position: relative;
-      padding-bottom: 6px;
-  
-     
-  }
-  
-  .heading h1::before{
-    content: "";
-    position: absolute;
-    width: 75%;
-    height: 3px;
-    background: #B0B0B0;
-    border-radius: 5px;
-    transform: scaleX(1);
-    left: 0;
-    bottom: 0;
-  }
 
 .outer-box{
     width: 100%;
@@ -79,9 +49,8 @@ h1::before{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
+    overflow: visible;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    
     position: relative;
     transition: transform  0.3s ease;
   }
@@ -127,7 +96,7 @@ h1::before{
   }
   .icon i{
     font-size: 25px;
-    color: #9b6f09;
+    color: var(--text-icon, #9b6f09);
     
   }
   

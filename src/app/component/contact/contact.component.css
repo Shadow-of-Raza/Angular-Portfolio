@@ -7,19 +7,19 @@
 }
 
 
-.title h1{
+.title .head{
     color: #d6d6d6;
     font-size: 40px;
     font-family: 'Trebuchet MS', sans-serif;
     position: relative;
     padding-bottom: 15px;
 }
-.title h1::before{
+.head::before{
     content: "";
     position: absolute;
     width: 75%;
     height: 4px;
-    background: #9b6f09;
+    background: var(--title-before-color, #9b6f09);
     border-radius: 5px;
     transform: scaleX(1);
     left: 0;
@@ -105,7 +105,7 @@
   }
 .icon i{
     font-size: 25px;
-    color: #9b6f09;
+    color: var(--text-icon, #9b6f09);
     
 }
 .inner-card{

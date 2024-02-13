@@ -9,19 +9,19 @@
 }
 
 
-.title h1{
+.title .head{
     color: #d6d6d6;
     font-size: 40px;
     font-family: 'Trebuchet MS', sans-serif;
     position: relative;
     padding-bottom: 15px;
 }
-.title h1::before{
+.head::before{
     content: "";
     position: absolute;
     width: 75%;
     height: 4px;
-    background: #9b6f09;
+    background: var(--title-before-color, #9b6f09);
     border-radius: 5px;
     transform: scaleX(1);
     left: 0;
@@ -113,10 +113,6 @@
   }
 
 
-  .doing {
-    border: 1px solid #9b6f09;
-  }
-
   .what-i-am-doing{
     height: 80%;
     width: 100%;
@@ -142,7 +138,7 @@
   }
   .doing-icon i{
     font-size: 25px;
-    color: #9b6f09;
+    color: var(--text-icon, #9b6f09);
     
   }
   .doing-content{
@@ -157,11 +153,11 @@
   .doing-heading{
     height: 15%;
     margin-top: 1rem;
-    color: #9b6f09;
     font-family: 'Trebuchet MS', sans-serif;
   }
   .doing-heading h2{
     font-size: 20px;
+    color: var(--text-icon, #9b6f09);
 
   }
   .doing-paragraph{
@@ -199,7 +195,7 @@
     flex: 0 0 100%;
     scroll-snap-align: start;
     transition: all 0.2s;
-    border: 1px solid #9b6f09;
+    border: none;
     border-left: 1px solid #303030;
     border-top: 1px solid   #303030;
 
@@ -225,7 +221,7 @@
   }
   
   .scrolling-wrapper::-webkit-scrollbar-thumb {
-    background: #9b6f09;
+    background: var(--scrollBar-color, #9b6f09) ;
   }
   
   .scrolling-wrapper::-webkit-scrollbar-track {
@@ -260,7 +256,7 @@
 }
 .icon i{
     font-size: 25px;
-    color: #9b6f09;
+    color: var(--text-icon, #9b6f09);
 }
 
 
@@ -278,7 +274,7 @@
 }
 
 .card-body-content1 h2{
-  color: #9b6f09;
+  color: var(--text-icon, #9b6f09);
   display: flex;
   justify-content:  center;
   position: relative;
