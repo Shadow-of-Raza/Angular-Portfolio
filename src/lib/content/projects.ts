@@ -4,34 +4,43 @@ export interface Project {
   title: string;
   image: string;
   githubLink: string;
-  description: string; // We can add descriptions or leave them to be populated
-  techStack: string[];  // We can add tech stack arrays
-  liveDemoLink?: string; // Optional live demo link
-  featured: boolean;     // Whether it's a featured project
+  description: string;
+  techStack: string[];
+  liveDemoLink?: string;
+  featured: boolean;
+  category: string;
 }
 
 export const projects: Project[] = data.portfolio.map((item, index) => {
-  // Let's add some default metadata for description/techstack based on the project names
   let description = 'A software project built with standard engineering practices.';
   let techStack: string[] = ['Java', 'SQL', 'Bootstrap'];
   let featured = false;
-  let liveDemoLink: string | undefined = undefined;
+  let category = 'Frontend';
 
   if (item.title.toLowerCase().includes('portfolio')) {
     description = 'A responsive, high-performance developer portfolio built with React & Next.js.';
     techStack = ['React', 'Next.js', 'TypeScript', 'Three.js', 'GSAP'];
     featured = true;
-  } else if (item.title.toLowerCase().includes('hotel')) {
-    description = 'A comprehensive hotel management system with a Client UI and server backend.';
-    techStack = ['Angular', 'Spring Boot', 'MySQL', 'REST API'];
-    featured = index === 1 || index === 2; // Make one of them featured
+    category = 'Frontend';
+  } else if (item.title.toLowerCase().includes('hotel') && item.title.toLowerCase().includes('clint')) {
+    description = 'A responsive hotel booking client dashboard managing room displays and reservations.';
+    techStack = ['Angular', 'Angular Material', 'TypeScript', 'HTML/CSS'];
+    featured = true;
+    category = 'Frontend';
+  } else if (item.title.toLowerCase().includes('hotel') && item.title.toLowerCase().includes('server')) {
+    description = 'REST API backend for hotel management system supporting rooms, bookings, and guest registration.';
+    techStack = ['Spring Boot', 'Spring Data JPA', 'MySQL', 'REST API'];
+    featured = true;
+    category = 'Full Stack';
   } else if (item.title.toLowerCase().includes('bank')) {
     description = 'A secure online banking system managing accounts, transactions, and statements.';
     techStack = ['Java EE', 'Servlets', 'JSP', 'JDBC', 'MySQL'];
     featured = true;
+    category = 'Full Stack';
   } else if (item.title.toLowerCase().includes('calculator')) {
     description = 'A interactive calculator web application supporting standard operations.';
     techStack = ['HTML', 'CSS', 'JavaScript'];
+    category = 'Frontend';
   }
 
   return {
@@ -40,7 +49,8 @@ export const projects: Project[] = data.portfolio.map((item, index) => {
     githubLink: item.github_link,
     description,
     techStack,
-    liveDemoLink,
+    liveDemoLink: undefined,
     featured,
+    category,
   };
 });

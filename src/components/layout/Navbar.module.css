@@ -1,0 +1,194 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-4);
+  transition: background-color var(--motion-duration-normal) var(--motion-ease-standard),
+              border-color var(--motion-duration-normal) var(--motion-ease-standard),
+              backdrop-filter var(--motion-duration-normal) var(--motion-ease-standard);
+  border-bottom: 1px solid transparent;
+}
+
+.scrolled {
+  background-color: var(--color-surface-glass);
+  border-bottom-color: var(--color-border-glass);
+  backdrop-filter: blur(12px) saturate(140%);
+}
+
+.logo {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  letter-spacing: -0.5px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.logoSpan {
+  color: var(--color-accent-gold);
+}
+
+.desktopNav {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+@media (max-width: 1023px) {
+  .desktopNav {
+    display: none;
+  }
+}
+
+.navList {
+  display: flex;
+  list-style: none;
+  gap: var(--space-3);
+  align-items: center;
+}
+
+.navLink {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+  font-weight: var(--font-weight-medium);
+  padding: var(--space-1) var(--space-2);
+  transition: color var(--motion-duration-fast) var(--motion-ease-standard);
+  position: relative;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: var(--color-accent-gold);
+}
+
+.activeLink {
+  color: var(--color-text-primary);
+}
+
+.activeLink::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: var(--space-2);
+  right: var(--space-2);
+  height: 2px;
+  background-color: var(--color-accent-gold);
+  border-radius: var(--radius-full);
+}
+
+.resumeBtn {
+  background-color: var(--color-accent-gold);
+  color: var(--color-text-inverse);
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  transition: transform var(--motion-duration-fast) var(--motion-ease-bounce-soft),
+              box-shadow var(--motion-duration-fast) var(--motion-ease-standard);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.resumeBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-glow-gold);
+}
+
+.resumeBtn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Hamburger button */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+@media (max-width: 1023px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+.hamburgerLine {
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-text-primary);
+  transition: transform var(--motion-duration-fast) var(--motion-ease-standard),
+              opacity var(--motion-duration-fast) var(--motion-ease-standard);
+  transform-origin: left center;
+}
+
+.hamburgerOpen .hamburgerLine:nth-child(1) {
+  transform: rotate(45deg) translateY(-2px);
+}
+
+.hamburgerOpen .hamburgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerOpen .hamburgerLine:nth-child(3) {
+  transform: rotate(-45deg) translateY(2px);
+}
+
+/* Mobile overlay menu */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-surface-overlay);
+  backdrop-filter: blur(24px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  gap: var(--space-4);
+  padding: var(--space-6) var(--space-4);
+}
+
+.mobileNavList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  list-style: none;
+  margin-bottom: var(--space-4);
+}
+
+.mobileNavLink {
+  font-size: var(--font-size-lg);
+  font-family: var(--font-family-display);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-secondary);
+  transition: color var(--motion-duration-fast) var(--motion-ease-standard);
+  text-decoration: none;
+}
+
+.mobileNavLink:hover {
+  color: var(--color-accent-gold);
+}
+
+.mobileActiveLink {
+  color: var(--color-text-primary);
+}

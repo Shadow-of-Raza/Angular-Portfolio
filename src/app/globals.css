@@ -93,3 +93,24 @@ body {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background-color: var(--color-accent-gold);
+  color: var(--color-text-inverse);
+  padding: 8px 16px;
+  z-index: 9999;
+  transition: top 0.2s var(--motion-ease-standard);
+  font-weight: var(--font-weight-semibold);
+  border-radius: 0 0 var(--radius-xs) 0;
+  text-decoration: none;
+}
+
+.skip-link:focus-visible {
+  top: 0;
+  outline: none;
+}
+

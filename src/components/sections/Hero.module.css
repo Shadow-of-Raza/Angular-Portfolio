@@ -1,0 +1,119 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: var(--color-surface-base);
+  padding: 0 var(--space-4);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  pointer-events: none; /* Let pointer pass through to WebGL canvas below */
+}
+
+/* Enable pointer events on buttons specifically */
+.content a,
+.content button {
+  pointer-events: auto;
+}
+
+.intro {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: var(--space-2);
+}
+
+.name {
+  font-family: var(--font-family-display);
+  font-size: clamp(2.5rem, 6vw + 1rem, var(--font-size-3xl));
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  line-height: var(--font-line-height-tight);
+  margin-bottom: var(--space-3);
+  letter-spacing: -1px;
+}
+
+.name span {
+  color: var(--color-accent-gold);
+}
+
+.role {
+  font-size: clamp(1.25rem, 3vw + 0.5rem, var(--font-size-2xl));
+  font-weight: var(--font-weight-medium);
+  color: var(--color-text-secondary);
+  height: 60px; /* reserve space to prevent jitter */
+}
+
+.cursor {
+  color: var(--color-accent-gold);
+  animation: blink 0.8s infinite;
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.brief {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+  max-width: 600px;
+  margin: var(--space-3) auto var(--space-4) auto;
+  line-height: var(--font-line-height-base);
+}
+
+.ctaContainer {
+  display: flex;
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.scrollCue {
+  position: absolute;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  z-index: 2;
+  transition: color var(--motion-duration-fast) var(--motion-ease-standard);
+  text-decoration: none;
+}
+
+.scrollCue:hover {
+  color: var(--color-accent-gold);
+}
+
+.scrollCueIcon {
+  animation: bounce 2s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-8px);
+  }
+  60% {
+    transform: translateY(-4px);
+  }
+}

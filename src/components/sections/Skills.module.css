@@ -1,0 +1,110 @@
+.section {
+  padding: var(--space-8) var(--space-4);
+  background-color: var(--color-surface-base);
+  border-bottom: 1px solid var(--color-border-strong);
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.titleContainer {
+  margin-bottom: var(--space-2);
+}
+
+.subtitle {
+  font-size: var(--font-size-xs);
+  color: var(--color-accent-gold);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: var(--font-weight-semibold);
+  margin-bottom: var(--space-1);
+}
+
+.title {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+@media (max-width: 1023px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-5);
+  }
+}
+
+.categoryCard {
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.categoryTitle {
+  font-family: var(--font-family-display);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  border-bottom: 1px solid var(--color-border-glass);
+  padding-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.skillsList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.skillItem {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.skillMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.skillName {
+  color: var(--color-text-primary);
+}
+
+.skillPercent {
+  color: var(--color-accent-gold);
+}
+
+.progressBarTrack {
+  width: 100%;
+  height: 6px;
+  background-color: var(--color-border-strong);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+.progressBarFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent-navy) 0%, var(--color-accent-gold) 100%);
+  border-radius: var(--radius-full);
+  transition: width 1.5s var(--motion-ease-standard);
+  position: relative;
+  box-shadow: 0 0 10px 0 var(--color-accent-gold-muted);
+}

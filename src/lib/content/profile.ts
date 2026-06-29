@@ -14,6 +14,7 @@ export interface PersonalInfo {
     pincode: string;
     displayAddress: string;
     hometownContext: string;
+    mapUrl: string;
   };
   profileImage: string;
   resumePdf: string;
@@ -66,6 +67,7 @@ export const personalInfo: PersonalInfo = {
     pincode: data.personal_info.location.pincode,
     displayAddress: data.personal_info.location.display_address,
     hometownContext: data.personal_info.location.hometown_context,
+    mapUrl: data.contact.google_map_embed_url,
   },
   // Map src/assets/ path to next.js public/ path
   profileImage: data.personal_info.profile_image.replace('src/assets/', '/'),
