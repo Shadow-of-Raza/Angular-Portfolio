@@ -1,0 +1,179 @@
+{
+  "personal_info": {
+    "name": "Mohd Ansar Bux",
+    "title": "Java Full Stack Developer",
+    "email": "anshuagh@gmail.com",
+    "phone": "+91 9144272136",
+    "alternate_phone": "+91 9244696911",
+    "birthday": "Dec 25, 2000",
+    "location": {
+      "city": "Bhopal",
+      "state": "Madhya Pradesh",
+      "country": "India",
+      "pincode": "488220",
+      "display_address": "Bhopal, Madhya Pradesh, India 488220.",
+      "hometown_context": "originally from Ajaigarh in district Panna"
+    },
+    "profile_image": "src/assets/anshu-profile.png",
+    "resume_pdf": "src/assets/Mohd-Ansar-Bux-Resume.pdf"
+  },
+  "social_links": {
+    "linkedin": "https://www.linkedin.com/in/mohd-ansar-bux/",
+    "github": "https://github.com/Shadow-of-Raza",
+    "instagram": "https://www.instagram.com/shadow.of.raza/",
+    "facebook": "https://www.facebook.com/shadowansar/",
+    "twitter": "https://twitter.com/BuxAnsar"
+  },
+  "home": {
+    "intro_title": "Hello, my name is Mohd Ansar Bux",
+    "typing_titles": [
+      "Software Engineer",
+      "Web Developer",
+      "Web Designer"
+    ],
+    "brief_intro": "I'm a Web Appliction Developer with one year of training experience. Certified in Java Full Stack technology. My experties is to create and design website, Web-Application and many more..."
+  },
+  "about": {
+    "welcome_message": "Welcome, visitors !",
+    "bio": "I'm Mohd Ansar Bux, hailing originally from Ajaigarh in district Panna, and currently based in Bhopal, Madhya Pradesh. I specialize in crafting software, web applications, and websites, alongside designing UX/UI experiences that blend functionality, user-friendliness, and responsiveness with aesthetic appeal. For me, the realm of design and development is more than just a profession; it's a boundless passion. I thrive on transforming intricate problems into elegant, intuitive designs.",
+    "what_i_do": [
+      {
+        "title": "Web-App Developer",
+        "description": "Building dynamic online platforms for diverse user needs.",
+        "icon": "fa-solid fa-laptop-code"
+      },
+      {
+        "title": "Website Design",
+        "description": "Crafting visually captivating and user-friendly digital interfaces.",
+        "icon": "fa-solid fa-code"
+      },
+      {
+        "title": "Software Developer",
+        "description": "Engineering custom solutions to streamline business operations.",
+        "icon": "fa-solid fa-microchip"
+      },
+      {
+        "title": "UI/UX Designing",
+        "description": "Designing intuitive interfaces for engaging user experiences.",
+        "icon": "fa-solid fa-file-code"
+      }
+    ],
+    "competencies": [
+      {
+        "title": "Fast Learner",
+        "description": "I have the ability to quickly acquire new knowledge and adapt to changing technological environments.",
+        "icon": "fa-solid fa-bolt"
+      },
+      {
+        "title": "Teamwork",
+        "description": "I collaborate effectively in multidisciplinary projects and communicate clearly with team members.",
+        "icon": "fas fa-users"
+      },
+      {
+        "title": "Problem Solving",
+        "description": "I am creative and efficient in identifying and solving technical problems.",
+        "icon": "fas fa-question-circle"
+      },
+      {
+        "title": "Effective Communication",
+        "description": "I have the skill to convey ideas clearly and concisely, both technically and non-technically.",
+        "icon": "fa-solid fa-comments"
+      }
+    ]
+  },
+  "resume": {
+    "experience": [
+      {
+        "role": "Java Full Stack Developer with Angular CLI",
+        "organization": "EduBridge Learning Pvt. Ltd.",
+        "employment_type": "Apprenticeship",
+        "duration": "May 2023 - Oct 2023",
+        "length": "6 mos",
+        "location": "Bengaluru, Karnataka, India (Remote)",
+        "description": "EduBridge Learning Pvt. Ltd. provided me with an immersive training and internship experience in Java Full Stack with Angular CLI, equipping me with a robust skill set to thrive in the world of modern web development. Throughout the program, I delved deep into Java programming, mastering both fundamental and advanced concepts essential for building scalable applications."
+      },
+      {
+        "role": "Java Full Stack Developer",
+        "organization": "Pentagon Space",
+        "employment_type": "Apprenticeship",
+        "duration": "Mar 2022 - Oct 2022",
+        "length": "8 mos",
+        "location": "Bengaluru, Karnataka, India (Remote)",
+        "description": "Pentagon Space Pvt. Ltd. is a cutting-edge tech firm pioneering advancements in space technology. As a Java Full Stack Developer, I completed an intensive training program, mastering essential technologies like Core Java, JDBC, Servlets, MySQL Database, HTML5, CSS3, Bootstrap, Spring, Spring Boot, Hibernate, JavaScript, JSP, and Apache Tomcat Server."
+      }
+    ],
+    "education": [
+      {
+        "degree": "Bachelor of Technology - BTech",
+        "field_of_study": "Computer Science",
+        "institution": "Bansal Institute of Research Technology & Science",
+        "location": "Bhopal, Madhya Pradesh, India",
+        "study_type": "Full-time",
+        "duration": "2018 - 2022"
+      },
+      {
+        "degree": "Intermediate",
+        "field_of_study": "Mathematics",
+        "institution": "Govt. Boys H. S. School",
+        "location": "Ajaigarh, Panna, Madhya Pradesh",
+        "study_type": "Full-time",
+        "duration": "2017 - 2018"
+      },
+      {
+        "degree": "Higher Education",
+        "field_of_study": "",
+        "institution": "Saraswat H. S. School",
+        "location": "Ajaigarh, Panna, Madhya Pradesh",
+        "study_type": "Full-time",
+        "duration": "2016 - 2017"
+      }
+    ],
+    "skills": [
+      { "name": "Java Full Stack", "level_percentage": 90 },
+      { "name": "Springboot Framework", "level_percentage": 70 },
+      { "name": "Spring Framework", "level_percentage": 60 },
+      { "name": "Hibernate Framework", "level_percentage": 70 },
+      { "name": "JDBC", "level_percentage": 70 },
+      { "name": "J2Ee", "level_percentage": 50 },
+      { "name": "Angular CLI", "level_percentage": 90 },
+      { "name": "Angular Material", "level_percentage": 60 },
+      { "name": "HTML", "level_percentage": 90 },
+      { "name": "CSS", "level_percentage": 80 },
+      { "name": "Bootstrap", "level_percentage": 80 },
+      { "name": "JavaScript", "level_percentage": 50 },
+      { "name": "TypeScript", "level_percentage": 80 },
+      { "name": "JSP Servlet", "level_percentage": 60 },
+      { "name": "SQL MySQL", "level_percentage": 90 }
+    ]
+  },
+  "portfolio": [
+    {
+      "title": "Portfolio Website",
+      "image": "src/assets/Portfolio.png",
+      "github_link": "https://github.com/Shadow-of-Raza/Angular-Portfolio.git"
+    },
+    {
+      "title": "Hotel-Management-Clint",
+      "image": "src/assets/GuestGuru.jpg",
+      "github_link": "https://github.com/Shadow-of-Raza/Clint-hotel-management.git"
+    },
+    {
+      "title": "Hotel-Management-Server",
+      "image": "src/assets/GuestGuru.jpg",
+      "github_link": "https://github.com/Shadow-of-Raza/Server-hotel-management.git"
+    },
+    {
+      "title": "Online Banking Application",
+      "image": "src/assets/bank.png",
+      "github_link": "https://github.com/Shadow-of-Raza/Online-Banking-Application.git"
+    },
+    {
+      "title": "Calculator",
+      "image": "src/assets/Calculator.png",
+      "github_link": "https://github.com/Shadow-of-Raza/Calculator.git"
+    }
+  ],
+  "contact": {
+    "google_map_embed_url": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234700.3459600717!2d77.24107796037427!3d23.199639466866447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397c428f8fd68fbd%3A0x2155716d572d4f8!2sBhopal%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1707480458566!5m2!1sen!2sin"
+  }
+}
