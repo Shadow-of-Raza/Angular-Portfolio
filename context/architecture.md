@@ -60,7 +60,8 @@ The workspace follows a strict folder structure to maintain clean boundaries bet
   ├── GuestGuru.jpg
   ├── bank.png
   ├── anshu-profile.png
-  └── Mohd-Ansar-Bux-Resume.pdf
+  └── Ansar-Bux-Software-Engineer.pdf
+
 
 /src
   ├── /app

@@ -15,7 +15,7 @@
       "hometown_context": "originally from Ajaigarh in district Panna"
     },
     "profile_image": "src/assets/anshu-profile.png",
-    "resume_pdf": "src/assets/Mohd-Ansar-Bux-Resume.pdf"
+    "resume_pdf": "src/assets/Ansar-Bux-Software-Engineer.pdf"
   },
   "social_links": {
     "linkedin": "https://linkedin.com/in/mohd-ansar-bux",
@@ -215,6 +215,48 @@
       "image": "src/assets/bank.png"
     },
     {
+      "name": "Hotel-Management-Clint",
+      "description": "Hotel management front-end dashboard managing room bookings, guest reservations, and checkout workflows.",
+      "stack": [
+        "Angular",
+        "Angular Material",
+        "TypeScript",
+        "HTML",
+        "CSS"
+      ],
+      "live": "",
+      "github": "https://github.com/Shadow-of-Raza/Clint-hotel-management.git",
+      "image": "src/assets/GuestGuru.jpg"
+    },
+    {
+      "name": "Hotel-Management-Server",
+      "description": "Spring Boot REST API backend managing databases, rooms, guests, and administrative tasks for hotel service.",
+      "stack": [
+        "Java",
+        "Spring Boot",
+        "MySQL",
+        "REST API",
+        "Hibernate"
+      ],
+      "live": "",
+      "github": "https://github.com/Shadow-of-Raza/Server-hotel-management.git",
+      "image": "src/assets/GuestGuru.jpg"
+    },
+    {
+      "name": "Online Banking Application",
+      "description": "Core banking web application managing account creation, funds transfer, transaction statements, and customer security.",
+      "stack": [
+        "Java EE",
+        "Servlets",
+        "JSP",
+        "JDBC",
+        "MySQL"
+      ],
+      "live": "",
+      "github": "https://github.com/Shadow-of-Raza/Online-Banking-Application.git",
+      "image": "src/assets/bank.png"
+    },
+    {
       "name": "Guess the Secret Number",
       "description": "An interactive number guessing game built using vanilla web technologies.",
       "stack": [
@@ -249,6 +291,18 @@
       "live": "https://my-portfolio-with-angular.netlify.app/",
       "github": "https://github.com/Shadow-of-Raza/Angular-Portfolio.git",
       "image": "src/assets/Portfolio.png"
+    },
+    {
+      "name": "Calculator",
+      "description": "A standard web calculator supporting basic arithmetic and clean interactive layout.",
+      "stack": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "live": "",
+      "github": "https://github.com/Shadow-of-Raza/Calculator.git",
+      "image": "src/assets/Calculator.png"
     }
   ],
   "contact": {
