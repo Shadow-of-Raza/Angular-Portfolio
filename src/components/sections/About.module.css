@@ -1,7 +1,7 @@
 .section {
   padding: var(--space-8) var(--space-4);
-  background-color: var(--color-surface-raised);
-  border-bottom: 1px solid var(--color-border-strong);
+  background-color: transparent;
+  border-bottom: none;
   display: flex;
   justify-content: center;
 }
@@ -20,7 +20,7 @@
 
 .subtitle {
   font-size: var(--font-size-xs);
-  color: var(--color-accent-gold);
+  color: var(--color-text-primary);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: var(--font-weight-semibold);
@@ -63,9 +63,9 @@
 }
 
 .bio {
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   font-size: var(--font-size-md);
-  line-height: var(--font-line-height-base);
+  line-height: 1.4;
 }
 
 .infoList {
@@ -86,7 +86,7 @@
 
 .infoItem {
   font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
 }
 
 .infoItem strong {
@@ -96,7 +96,7 @@
 }
 
 .infoItem span {
-  color: var(--color-accent-gold);
+  color: var(--color-text-primary);
 }
 
 .rightColumn {
@@ -145,7 +145,7 @@
   height: 42px;
   border-radius: var(--radius-xs);
   background-color: var(--color-accent-navy-muted);
-  color: var(--color-accent-gold);
+  color: var(--color-text-primary);
   border: 1px solid var(--color-border-glass);
 }
 
@@ -157,8 +157,8 @@
 
 .cardDesc {
   font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
-  line-height: var(--font-line-height-base);
+  color: var(--color-text-primary);
+  line-height: 1.4;
 }
 
 .competenciesSection {
@@ -219,7 +219,7 @@
   height: 32px;
   border-radius: var(--radius-xs);
   background-color: var(--color-surface-glass);
-  color: var(--color-accent-gold);
+  color: var(--color-text-primary);
   border: 1px solid var(--color-border-glass);
 }
 
@@ -231,8 +231,8 @@
 
 .compDesc {
   font-size: var(--font-size-xs);
-  color: var(--color-text-secondary);
-  line-height: var(--font-line-height-base);
+  color: var(--color-text-primary);
+  line-height: 1.4;
 }
 
 .extraSection {
@@ -275,7 +275,7 @@
 
 .tagItem {
   font-size: var(--font-size-xs);
-  color: var(--color-accent-gold);
+  color: var(--color-text-primary);
   background-color: var(--color-surface-glass);
   border: 1px solid var(--color-border-glass);
   padding: 6px 14px;

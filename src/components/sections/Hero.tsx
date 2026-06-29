@@ -1,16 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
 import { ArrowDown } from 'lucide-react';
+import { motion } from 'framer-motion';
 import { personalInfo, homeContent } from '@/lib/content/profile';
-import CanvasFallback from '../three/CanvasFallback';
 import styles from './Hero.module.css';
-
-const HeroCanvas = dynamic(() => import('../three/HeroCanvas'), {
-  ssr: false,
-  loading: () => <CanvasFallback />,
-});
 
 export default function Hero() {
   const [text, setText] = useState('');
@@ -56,27 +50,59 @@ export default function Hero() {
 
   return (
     <section id="hero" className={styles.hero}>
-      {/* 3D WebGL centerpiece container */}
-      <HeroCanvas />
-
       {/* Hero texts overlay */}
       <div className={styles.content}>
-        <p className={styles.intro}>{personalInfo.title}</p>
-        <h1 className={styles.name}>
+        <motion.p
+          className={styles.intro}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
+        >
+          {personalInfo.title}
+        </motion.p>
+        
+        <motion.h1
+          className={styles.name}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] as const }}
+        >
           Hello, my name is <span>{personalInfo.name}</span>
-        </h1>
-        <div className={styles.role}>
+        </motion.h1>
+        
+        <motion.div
+          className={styles.role}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.3, ease: [0.22, 1, 0.36, 1] as const }}
+        >
           I'm a {text}
           <span className={styles.cursor}>|</span>
-        </div>
-        <p className={styles.brief}>{homeContent.briefIntro}</p>
+        </motion.div>
+        
+        <motion.p
+          className={styles.brief}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.45, ease: [0.22, 1, 0.36, 1] as const }}
+        >
+          {homeContent.briefIntro}
+        </motion.p>
       </div>
 
       {/* Accessibility scroll cue */}
-      <a href="#about" onClick={handleScrollCue} className={styles.scrollCue} aria-label="Scroll down to About section">
+      <motion.a
+        href="#about"
+        onClick={handleScrollCue}
+        className={styles.scrollCue}
+        aria-label="Scroll down to About section"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
+      >
         <span>About Me</span>
         <ArrowDown size={16} className={styles.scrollCueIcon} aria-hidden="true" />
-      </a>
+      </motion.a>
     </section>
   );
 }

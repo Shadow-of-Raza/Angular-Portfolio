@@ -1,7 +1,7 @@
 .section {
   padding: var(--space-8) var(--space-4);
-  background-color: var(--color-surface-base);
-  border-bottom: 1px solid var(--color-border-strong);
+  background-color: transparent;
+  border-bottom: none;
   display: flex;
   justify-content: center;
 }
@@ -20,7 +20,7 @@
 
 .subtitle {
   font-size: var(--font-size-xs);
-  color: var(--color-accent-gold);
+  color: var(--color-text-primary);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: var(--font-weight-semibold);
@@ -149,7 +149,7 @@
 
 .projectCategory {
   font-size: var(--font-size-xs);
-  color: var(--color-accent-gold);
+  color: var(--color-text-primary);
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: var(--font-weight-semibold);
@@ -165,8 +165,8 @@
 
 .projectDesc {
   font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
-  line-height: var(--font-line-height-base);
+  color: var(--color-text-primary);
+  line-height: 1.4;
   display: -webkit-box;
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
@@ -183,7 +183,7 @@
 
 .techTag {
   font-size: var(--font-size-xs);
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary);
   background-color: var(--color-surface-glass);
   padding: 2px 8px;
   border-radius: var(--radius-xs);

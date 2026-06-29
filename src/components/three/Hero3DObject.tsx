@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useRef, useEffect } from 'react';
-import { useFrame } from '@react-three/fiber';
+import React, { useRef, useEffect, useMemo } from 'react';
+import { useFrame, useThree } from '@react-three/fiber';
 import { TorusKnot } from '@react-three/drei';
 import * as THREE from 'three';
 import { gsap } from 'gsap';
@@ -12,10 +12,78 @@ interface Hero3DObjectProps {
   quality: QualityTier;
 }
 
+function BackgroundParticles() {
+  const pointsRef = useRef<THREE.Points>(null);
+  const count = 400; // Performance budget
+
+  const positions = useMemo(() => {
+    const pos = new Float32Array(count * 3);
+    for (let i = 0; i < count; i++) {
+      // Scatter points in a wide full-screen volume, slightly pushed back
+      pos[i * 3] = (Math.random() - 0.5) * 20;
+      pos[i * 3 + 1] = (Math.random() - 0.5) * 14;
+      pos[i * 3 + 2] = (Math.random() - 0.5) * 14 - 3;
+    }
+    return pos;
+  }, []);
+
+  // Dynamically generate a circular particle texture in memory to represent stars
+  const circleTexture = useMemo(() => {
+    if (typeof window === 'undefined') return null;
+    const canvas = document.createElement('canvas');
+    canvas.width = 16;
+    canvas.height = 16;
+    const ctx = canvas.getContext('2d');
+    if (ctx) {
+      ctx.beginPath();
+      ctx.arc(8, 8, 8, 0, Math.PI * 2);
+      ctx.fillStyle = '#ffffff';
+      ctx.fill();
+    }
+    const texture = new THREE.CanvasTexture(canvas);
+    return texture;
+  }, []);
+
+  useFrame((state, delta) => {
+    if (pointsRef.current) {
+      // Slow techy background rotation
+      pointsRef.current.rotation.y += delta * 0.03;
+      pointsRef.current.rotation.x += delta * 0.015;
+    }
+  });
+
+  return (
+    <points ref={pointsRef}>
+      <bufferGeometry>
+        <bufferAttribute
+          attach="attributes-position"
+          args={[positions, 3]}
+        />
+      </bufferGeometry>
+      <pointsMaterial
+        size={0.12} // Adjusted size for smooth circle visibility
+        color="#f0f0fa"
+        map={circleTexture || undefined}
+        sizeAttenuation={true}
+        transparent={true}
+        opacity={0.5}
+        depthWrite={false}
+      />
+    </points>
+  );
+}
+
 export default function Hero3DObject({ quality }: Hero3DObjectProps) {
   const meshRef = useRef<THREE.Mesh>(null);
   const mouseRef = useRef({ x: 0, y: 0 });
   const timeRef = useRef(0);
+  const { width } = useThree((state) => state.viewport);
+
+  // Responsive default positions based on R3F viewport coordinates
+  const isMobile = width < 6;
+  const defaultX = isMobile ? 0 : 1.4;
+  const defaultY = isMobile ? 0.7 : 0;
+  const defaultZ = isMobile ? -0.5 : 0;
 
   // Track mouse coordinates for desktop parallax
   useEffect(() => {
@@ -109,27 +177,31 @@ export default function Hero3DObject({ quality }: Hero3DObjectProps) {
 
   // Parameterize TorusKnot segments based on quality tier (performance budget)
   const knotArguments: [number, number, number, number] = 
-    quality === 'high' ? [1.2, 0.38, 256, 32] :
-    quality === 'medium' ? [1.2, 0.38, 128, 16] :
-    [1.2, 0.38, 64, 8];
+    quality === 'high' ? [0.84, 0.38, 256, 32] :
+    quality === 'medium' ? [0.84, 0.38, 128, 16] :
+    [0.84, 0.38, 64, 8];
 
   return (
-    <TorusKnot
-      ref={meshRef}
-      args={knotArguments}
-      castShadow
-      receiveShadow
-    >
-      <meshPhysicalMaterial
-        color="#c88b2b" // Premium gold accent
-        metalness={0.95}
-        roughness={quality === 'high' ? 0.18 : 0.25}
-        clearcoat={quality === 'high' ? 1.0 : 0.5}
-        clearcoatRoughness={0.1}
-        reflectivity={1.0}
-        iridescence={quality === 'high' ? 0.4 : 0}
-        iridescenceIOR={1.8}
-      />
-    </TorusKnot>
+    <>
+      <BackgroundParticles />
+      <TorusKnot
+        ref={meshRef}
+        args={knotArguments}
+        position={[defaultX, defaultY, defaultZ]}
+        castShadow
+        receiveShadow
+      >
+        <meshPhysicalMaterial
+          color="#f0f0fa" // Premium stark white accent
+          metalness={0.95}
+          roughness={quality === 'high' ? 0.18 : 0.25}
+          clearcoat={quality === 'high' ? 1.0 : 0.5}
+          clearcoatRoughness={0.1}
+          reflectivity={1.0}
+          iridescence={quality === 'high' ? 0.4 : 0}
+          iridescenceIOR={1.8}
+        />
+      </TorusKnot>
+    </>
   );
 }

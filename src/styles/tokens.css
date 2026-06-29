@@ -1,75 +1,76 @@
 :root {
-  /* Colors */
-  --color-surface-base: #050505;
-  --color-surface-raised: #0D0D0F;
-  --color-surface-overlay: rgba(0, 0, 0, 0.7);
-  --color-surface-glass: rgba(255, 255, 255, 0.04);
-  --color-border-glass: rgba(255, 255, 255, 0.08);
-  --color-border-strong: #1A1A1C;
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: #B8B8BC;
-  --color-text-tertiary: #6E6E73;
-  --color-text-inverse: #050505;
-  --color-accent-gold: #C88B2B;
-  --color-accent-gold-muted: rgba(200, 139, 43, 0.2);
-  --color-accent-navy: #1F3356;
-  --color-accent-navy-muted: rgba(31, 51, 86, 0.4);
-  --color-state-success: #2BAA6B;
-  --color-state-error: #D14B4B;
-  --color-state-focus-ring: #C88B2B;
+  /* SpaceX Colors */
+  --color-surface-base: #000000;         /* Pitch Black */
+  --color-surface-raised: #0a0a0c;       /* Stark Dark Card */
+  --color-surface-overlay: rgba(0, 0, 0, 0.9);
+  --color-surface-glass: rgba(255, 255, 255, 0.03);
+  --color-border-glass: rgba(240, 240, 250, 0.08);
+  --color-border-strong: #0000ee;        /* Pure Blue */
+  --color-text-primary: #f0f0fa;         /* Stark White/Cream */
+  --color-text-secondary: #0000ee;       /* Pure Blue */
+  --color-text-tertiary: #8a8a93;
+  --color-text-inverse: #000000;
+  --color-accent-gold: #0000ee;          /* Pure Blue Accent */
+  --color-accent-gold-muted: rgba(0, 0, 238, 0.15);
+  --color-accent-navy: #f0f0fa;          /* Stark White Accent */
+  --color-accent-navy-muted: rgba(240, 240, 250, 0.4);
+  --color-state-success: #0000ee;
+  --color-state-error: #ff4d4d;
+  --color-state-focus-ring: #0000ee;
 
-  /* Typography */
-  --font-family-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  --font-family-display: 'General Sans', 'Clash Display', 'Inter', system-ui, sans-serif;
-  --font-weight-base: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
+  /* SpaceX Typography */
+  --font-family-primary: 'D-DIN', 'Arial', 'Verdana', sans-serif;
+  --font-family-display: 'D-DIN', 'Arial', 'Verdana', sans-serif;
+  --font-weight-base: 700;               /* All texts bold by default */
+  --font-weight-medium: 700;
+  --font-weight-semibold: 700;
   --font-weight-bold: 700;
-  --font-line-height-base: 1.5;
+  --font-line-height-base: 15.895px;     /* Stark tight line height, scaled 30% */
   --font-line-height-tight: 1.1;
 
-  /* Font Sizes */
-  --font-size-xs: 0.875rem; /* 14px */
-  --font-size-sm: 1rem;     /* 16px */
-  --font-size-md: 1.125rem; /* 18px */
-  --font-size-lg: 1.5rem;   /* 24px */
-  --font-size-xl: 2.25rem;  /* 36px */
-  --font-size-2xl: 3.5rem;  /* 56px */
-  --font-size-3xl: 5rem;    /* 80px */
-  --font-size-hero-mobile: 2.75rem; /* 44px */
+  /* SpaceX Typography Scale - 30% Scale Increase */
+  --font-size-base: 16.91px;             /* Base size, scaled 30% */
+  --font-size-xs: 15.6px;                /* 12px * 1.3 */
+  --font-size-sm: 16.91px;               /* 13.01px * 1.3 */
+  --font-size-md: 17.33px;               /* 13.33px * 1.3 */
+  --font-size-lg: 20.8px;                /* 16px * 1.3 */
+  --font-size-xl: 62.4px;                /* 48px * 1.3 */
+  --font-size-2xl: 78px;                 /* 60px * 1.3 */
+  --font-size-3xl: 104px;                /* 80px * 1.3 */
+  --font-size-hero-mobile: 46.8px;       /* 36px * 1.3 */
 
-  /* Spacing */
-  --space-1: 0.5rem;   /* 8px */
-  --space-2: 0.75rem;  /* 12px */
-  --space-3: 1rem;     /* 16px */
-  --space-4: 1.5rem;   /* 24px */
-  --space-5: 2rem;     /* 32px */
-  --space-6: 4rem;     /* 64px */
-  --space-7: 6rem;     /* 96px */
-  --space-8: 8rem;     /* 128px */
-  --space-9: 10rem;    /* 160px */
+  /* SpaceX Spacing Scale */
+  --space-1: 15px;
+  --space-2: 18px;
+  --space-3: 20px;
+  --space-4: 24px;
+  --space-5: 30px;
+  --space-6: 60px;
+  --space-7: 75px;
+  --space-8: 90px;
+  --space-9: 120px;
 
-  /* Radius */
-  --radius-xs: 8px;
-  --radius-sm: 16px;
-  --radius-md: 24px;
+  /* SpaceX Radius Scale */
+  --radius-xs: 4px;
+  --radius-sm: 32px;
+  --radius-md: 32px;
   --radius-full: 999px;
 
-  /* Shadows */
-  --shadow-glow-gold: 0 0 32px 0 rgba(200, 139, 43, 0.35);
-  --shadow-glow-navy: 0 0 40px 0 rgba(31, 51, 86, 0.45);
-  --shadow-card-rest: 0 8px 24px -8px rgba(0, 0, 0, 0.6);
-  --shadow-card-hover: 0 24px 48px -12px rgba(0, 0, 0, 0.75), 0 0 32px 0 rgba(200, 139, 43, 0.2);
-  --shadow-glass-inset: inset 0 1px 0 0 rgba(255, 255, 255, 0.08);
+  /* SpaceX Shadows */
+  --shadow-glow-gold: 0 0 24px 0 rgba(0, 0, 238, 0.35); /* Pure Blue Glow */
+  --shadow-glow-navy: 0 0 32px 0 rgba(240, 240, 250, 0.15); /* White Glow */
+  --shadow-card-rest: 0 4px 12px rgba(0, 0, 0, 0.9);
+  --shadow-card-hover: 0 12px 30px rgba(0, 0, 0, 0.95), 0 0 16px 0 rgba(0, 0, 238, 0.15);
+  --shadow-glass-inset: inset 0 1px 0 0 rgba(255, 255, 255, 0.05);
 
-  /* Motion */
-  --motion-duration-instant: 150ms;
-  --motion-duration-fast: 250ms;
-  --motion-duration-normal: 400ms;
-  --motion-duration-slow: 700ms;
-  --motion-duration-cinematic: 1200ms;
-  --motion-ease-standard: cubic-bezier(0.22, 1, 0.36, 1);
+  /* SpaceX Motion (Instant 500ms) */
+  --motion-duration-instant: 500ms;
+  --motion-duration-fast: 500ms;
+  --motion-duration-normal: 500ms;
+  --motion-duration-slow: 500ms;
+  --motion-duration-cinematic: 500ms;
+  --motion-ease-standard: cubic-bezier(0.25, 1, 0.5, 1);
   --motion-ease-in: cubic-bezier(0.55, 0, 1, 0.45);
   --motion-ease-out: cubic-bezier(0, 0.55, 0.45, 1);
-  --motion-ease-bounce-soft: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --motion-ease-bounce-soft: cubic-bezier(0.25, 1, 0.5, 1);
 }

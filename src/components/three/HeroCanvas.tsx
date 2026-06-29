@@ -18,25 +18,25 @@ export default function HeroCanvas() {
   return (
     <div
       style={{
-        position: 'absolute',
+        position: 'fixed',
         top: 0,
         left: 0,
-        width: '100%',
-        height: '100%',
-        zIndex: 1,
+        width: '100vw',
+        height: '100vh',
+        zIndex: -1, // Fixed background layer behind the text content
         pointerEvents: 'none', // Allow clicking through Canvas to reach text/buttons
-        backgroundColor: 'var(--color-surface-base)',
+        backgroundColor: 'transparent',
       }}
       aria-hidden="true"
     >
-      <Suspense fallback={<CanvasFallback />}>
+      <Suspense fallback={null}>
         <Canvas
           camera={{ position: [0, 0, 5], fov: 45 }}
           dpr={tier === 'high' ? [1, 2] : [1, 1.5]}
           shadows={tier !== 'low'}
           gl={{
             antialias: true,
-            alpha: false,
+            alpha: true, // Allow transparency to render over the background
             powerPreference: 'high-performance',
             preserveDrawingBuffer: false,
           }}
@@ -44,7 +44,7 @@ export default function HeroCanvas() {
           {/* Environment lighting & reflections */}
           <SceneEnvironment quality={tier} />
 
-          {/* 3D torus centerpiece */}
+          {/* 3D torus centerpiece & Background Particles */}
           <Hero3DObject quality={tier} />
         </Canvas>
       </Suspense>

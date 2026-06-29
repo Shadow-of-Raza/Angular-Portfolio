@@ -2,39 +2,50 @@
   position: relative;
   min-height: 100vh;
   width: 100%;
+  background-color: transparent;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  padding: var(--space-6) var(--space-4);
   overflow: hidden;
-  background-color: var(--color-surface-base);
-  padding: 0 var(--space-4);
 }
 
 .content {
   position: relative;
   z-index: 2;
-  text-align: center;
-  max-width: 800px;
+  text-align: left;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   pointer-events: none; /* Let pointer pass through to WebGL canvas below */
 }
 
-/* Enable pointer events on buttons specifically */
+@media (min-width: 1024px) {
+  .content {
+    margin-left: 15%;
+  }
+}
+
+/* Enable pointer events on buttons/links inside content */
 .content a,
-.content button {
+.content button,
+.content span {
   pointer-events: auto;
 }
 
 .intro {
   font-size: var(--font-size-md);
-  color: var(--color-text-secondary);
+  color: var(--color-text-primary); /* SpaceX stark white */
   text-transform: uppercase;
   letter-spacing: 2px;
+  font-weight: var(--font-weight-semibold);
   margin-bottom: var(--space-2);
 }
 
 .name {
   font-family: var(--font-family-display);
-  font-size: clamp(2.5rem, 6vw + 1rem, var(--font-size-3xl));
+  font-size: var(--font-size-xl);
   font-weight: var(--font-weight-bold);
   color: var(--color-text-primary);
   line-height: var(--font-line-height-tight);
@@ -43,40 +54,35 @@
 }
 
 .name span {
-  color: var(--color-accent-gold);
+  color: var(--color-text-primary);
 }
 
 .role {
-  font-size: clamp(1.25rem, 3vw + 0.5rem, var(--font-size-2xl));
+  font-size: clamp(1.25rem, 2.5vw + 0.5rem, 1.75rem);
   font-weight: var(--font-weight-medium);
-  color: var(--color-text-secondary);
-  height: 60px; /* reserve space to prevent jitter */
+  color: var(--color-text-primary); /* SpaceX stark white */
+  height: 50px;
+  margin-bottom: var(--space-2);
 }
 
 .cursor {
-  color: var(--color-accent-gold);
+  color: var(--color-text-primary); /* SpaceX stark white */
   animation: blink 0.8s infinite;
   display: inline-block;
   margin-left: 4px;
 }
 
 .brief {
-  font-size: var(--font-size-md);
-  color: var(--color-text-secondary);
-  max-width: 600px;
-  margin: var(--space-3) auto var(--space-4) auto;
-  line-height: var(--font-line-height-base);
-}
-
-.ctaContainer {
-  display: flex;
-  gap: var(--space-3);
-  justify-content: center;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-primary); /* Stark white contrast */
+  line-height: 1.4;
+  margin-bottom: var(--space-4);
+  max-width: 480px;
 }
 
 .scrollCue {
   position: absolute;
-  bottom: var(--space-4);
+  bottom: var(--space-3);
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -88,13 +94,13 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   cursor: pointer;
-  z-index: 2;
-  transition: color var(--motion-duration-fast) var(--motion-ease-standard);
+  z-index: 3;
   text-decoration: none;
+  transition: color var(--motion-duration-fast) var(--motion-ease-standard);
 }
 
 .scrollCue:hover {
-  color: var(--color-accent-gold);
+  color: var(--color-text-primary);
 }
 
 .scrollCueIcon {
@@ -115,5 +121,38 @@
   }
   60% {
     transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 1023px) {
+  .hero {
+    justify-content: center;
+    padding-top: 140px;
+    padding-bottom: 80px;
+    text-align: center;
+  }
+  
+  .content {
+    text-align: center;
+    margin: 180px auto 0 auto; /* push text below mobile 3D model */
+    max-width: 500px;
+    align-items: center;
+  }
+  
+  .brief {
+    max-width: 100%;
+  }
+
+  .scrollCue {
+    display: none;
+  }
+}
+
+@media (max-width: 599px) {
+  .hero {
+    padding-top: 100px;
+  }
+  .content {
+    margin-top: 120px;
   }
 }

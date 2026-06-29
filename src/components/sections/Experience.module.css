@@ -1,7 +1,7 @@
 .section {
   padding: var(--space-8) var(--space-4);
-  background-color: var(--color-surface-raised);
-  border-bottom: 1px solid var(--color-border-strong);
+  background-color: transparent;
+  border-bottom: none;
   display: flex;
   justify-content: center;
 }
@@ -20,7 +20,7 @@
 
 .subtitle {
   font-size: var(--font-size-xs);
-  color: var(--color-accent-gold);
+  color: var(--color-text-primary);
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: var(--font-weight-semibold);
@@ -61,7 +61,7 @@
 }
 
 .headerIcon {
-  color: var(--color-accent-gold);
+  color: var(--color-text-primary);
 }
 
 .columnTitle {
@@ -128,7 +128,7 @@
 .itemOrg {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
-  color: var(--color-accent-gold);
+  color: var(--color-text-primary);
 }
 
 .itemMeta {
@@ -150,8 +150,8 @@
 
 .itemDesc {
   font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
-  line-height: var(--font-line-height-base);
+  color: var(--color-text-primary);
+  line-height: 1.4;
 }
 
 .downloadWrapper {
@@ -163,7 +163,7 @@
 .downloadBtn {
   background: none;
   border: 1px solid var(--color-accent-gold);
-  color: var(--color-accent-gold);
+  color: var(--color-text-primary);
   padding: 12px 28px;
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
@@ -197,8 +197,8 @@
 
 .respItem {
   font-size: var(--font-size-sm);
-  color: var(--color-text-secondary);
-  line-height: var(--font-line-height-base);
+  color: var(--color-text-primary);
+  line-height: 1.4;
 }
 
 .expTechList {
@@ -263,7 +263,7 @@
 
 .certIssuer {
   font-size: var(--font-size-xs);
-  color: var(--color-accent-gold);
+  color: var(--color-text-primary);
 }
 
 .certYear {

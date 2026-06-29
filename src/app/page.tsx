@@ -9,14 +9,18 @@ import Testimonials from '@/components/sections/Testimonials';
 import Projects from '@/components/sections/Projects';
 import Contact from '@/components/sections/Contact';
 import SectionReveal from '@/components/ui/SectionReveal';
+import SpaceBackground from '@/components/three/SpaceBackground';
 
 export default function Home() {
   return (
     <>
       <Navbar />
       
-      <main id="main-content">
-        {/* Hero WebGL section */}
+      {/* Full screen fixed WebGL 3D scene background */}
+      <SpaceBackground />
+      
+      <main id="main-content" style={{ position: 'relative', zIndex: 2 }}>
+        {/* Hero Section */}
         <Hero />
 
         {/* About Section */}
