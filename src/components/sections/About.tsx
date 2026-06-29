@@ -107,6 +107,33 @@ export default function About() {
             ))}
           </div>
         </div>
+
+        {/* Languages & Interests */}
+        <div className={styles.extraSection}>
+          {/* Languages */}
+          <div className={styles.extraBlock}>
+            <h3 className={styles.extraTitle}>Languages</h3>
+            <ul className={styles.tagList}>
+              {aboutContent.languages.map((lang) => (
+                <li key={lang} className={styles.tagItem}>
+                  {lang}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Interests */}
+          <div className={styles.extraBlock}>
+            <h3 className={styles.extraTitle}>Interests</h3>
+            <ul className={styles.tagList}>
+              {aboutContent.interests.map((interest) => (
+                <li key={interest} className={styles.tagItem}>
+                  {interest}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );

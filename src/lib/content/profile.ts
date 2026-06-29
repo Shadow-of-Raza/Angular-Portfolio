@@ -51,6 +51,8 @@ export interface AboutContent {
   bio: string;
   whatIDo: WhatIDoItem[];
   competencies: CompetencyItem[];
+  languages: string[];
+  interests: string[];
 }
 
 export const personalInfo: PersonalInfo = {
@@ -93,4 +95,6 @@ export const aboutContent: AboutContent = {
   bio: data.about.bio,
   whatIDo: data.about.what_i_do,
   competencies: data.about.competencies,
+  languages: data.about.languages,
+  interests: data.about.interests,
 };

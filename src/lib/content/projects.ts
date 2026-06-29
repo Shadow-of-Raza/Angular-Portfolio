@@ -11,46 +11,20 @@ export interface Project {
   category: string;
 }
 
-export const projects: Project[] = data.portfolio.map((item, index) => {
-  let description = 'A software project built with standard engineering practices.';
-  let techStack: string[] = ['Java', 'SQL', 'Bootstrap'];
-  let featured = false;
-  let category = 'Frontend';
-
-  if (item.title.toLowerCase().includes('portfolio')) {
-    description = 'A responsive, high-performance developer portfolio built with React & Next.js.';
-    techStack = ['React', 'Next.js', 'TypeScript', 'Three.js', 'GSAP'];
-    featured = true;
-    category = 'Frontend';
-  } else if (item.title.toLowerCase().includes('hotel') && item.title.toLowerCase().includes('clint')) {
-    description = 'A responsive hotel booking client dashboard managing room displays and reservations.';
-    techStack = ['Angular', 'Angular Material', 'TypeScript', 'HTML/CSS'];
-    featured = true;
-    category = 'Frontend';
-  } else if (item.title.toLowerCase().includes('hotel') && item.title.toLowerCase().includes('server')) {
-    description = 'REST API backend for hotel management system supporting rooms, bookings, and guest registration.';
-    techStack = ['Spring Boot', 'Spring Data JPA', 'MySQL', 'REST API'];
-    featured = true;
-    category = 'Full Stack';
-  } else if (item.title.toLowerCase().includes('bank')) {
-    description = 'A secure online banking system managing accounts, transactions, and statements.';
-    techStack = ['Java EE', 'Servlets', 'JSP', 'JDBC', 'MySQL'];
-    featured = true;
-    category = 'Full Stack';
-  } else if (item.title.toLowerCase().includes('calculator')) {
-    description = 'A interactive calculator web application supporting standard operations.';
-    techStack = ['HTML', 'CSS', 'JavaScript'];
-    category = 'Frontend';
-  }
+export const projects: Project[] = data.portfolio.map((item) => {
+  // Categorize based on stack content
+  const stack = item.stack || [];
+  const isFullStack = stack.includes('Java') || stack.includes('Spring Boot') || stack.includes('Node.js') || stack.includes('Express.js');
+  const category = isFullStack ? 'Full Stack' : 'Frontend';
 
   return {
-    title: item.title,
+    title: item.name,
     image: item.image.replace('src/assets/', '/'),
-    githubLink: item.github_link,
-    description,
-    techStack,
-    liveDemoLink: undefined,
-    featured,
+    githubLink: item.github,
+    description: item.description || 'A software project built with standard engineering practices.',
+    techStack: stack,
+    liveDemoLink: item.live || undefined,
+    featured: true,
     category,
   };
 });
